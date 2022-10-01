@@ -1,0 +1,8 @@
+Notes on "directories_for_loop.sh" script.
+------------------------------------------
+
+I want to make a script that does the following:
+
+- Makes a directory.
+- fill that directory with 10 .txt files.
+- if a file is named "10" delete only that file in the directory.
