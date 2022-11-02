@@ -11,8 +11,8 @@ printf "Programming language: "
 read user_input
 
 # C code template
-if  [ $user_input == 'c' ] || 
-    [ $user_input == 'C' ]
+if  [ $user_input == "c" ] || 
+    [ $user_input == "C" ]
 then
 	printf "Filename: "
 	read file_name
@@ -75,6 +75,25 @@ then
 
 	vim $file_name.ps1
 
+# Rust code template
+elif    [ $user_input == "Rust" ] || 
+        [ $user_input == "rust" ] || 
+        [ $user_input == "RUST" ]
+then
+	printf "Filename: "
+	read file_name
+	touch "$file_name.rs"
+	printf "/* Programmer: Per Stoor\n" 		        >> $file_name.rs
+	printf " * Date: $TODAYS_DATE\n" 		            >> $file_name.rs
+	printf " * Last changed: $TODAYS_DATE\n"            >> $file_name.rs
+	printf " * Type of program: \n" 			        >> $file_name.rs
+	printf " */\n"	 				                    >> $file_name.rs
+	printf "\n"					                        >> $file_name.rs
+	printf "fn main(){ \n" 	                            >> $file_name.rs
+	printf "\n"					                        >> $file_name.rs
+	printf "} \n" 					                    >> $file_name.rs
+
+	vim $file_name.rs
 
 # When template does not exist
 else
