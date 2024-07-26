@@ -15,7 +15,7 @@
 # Could not open a connection to your authentication agent  -> $? = 2
 # Identity added: [path to private ssh key]                 -> $? = 0
 
-#i/usr/bin/bash
+#/usr/bin/bash
 
 printf "1. Log in to GitHub.\n"
 printf "2. Log out from GitHub.\n"
