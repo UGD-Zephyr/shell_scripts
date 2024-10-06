@@ -26,7 +26,7 @@ read -p "Selection: " user_choice
     if [ $user_choice == 1 ]; then
         printf "logging in to GitHub with [gh auth login]\n"
         printf "Please wait...\n"
-            gh auth login --with-token < [PATH TO .txt file with token]
+            gh auth login --with-token < "/home/per/Github/02_tokens/debian_token.txt"
         printf "Login successful!\n"
 
     elif [ $user_choice == 2 ]; then
@@ -35,10 +35,10 @@ read -p "Selection: " user_choice
             gh auth logout
 
     elif [ $user_choice == 3 ]; then
-        ssh-add [PATH TO SSH KEY]
+        ssh-add /home/per/.ssh/id_ed25519
             if [ $? == 2  ]; then
                 eval $(ssh-agent -s)
-                ssh-add [PATH TO SSH KEY]
+                ssh-add /home/per/.ssh/id_ed25519
             fi
 
     else
